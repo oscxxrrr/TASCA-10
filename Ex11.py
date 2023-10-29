@@ -1,15 +1,38 @@
-def menu_principal ():
+numero1=int(input("Ingresa un número: "))
+numero2=int(input("Ingresa otro número: "))
+
+eleccion = 0
+
+while eleccion != 6:
     print("""
-        Menu principal:
-          1. Calculadora enters
-          2. Calculadora reals
-          3. Sortir
-          """) 
-    x = int(input("Eligeixi una opcio"))
-    if x>0 and x<4:
-        return x
-    else:
-        return 0
-#Programa principal
-a = menu_principal()
-print(a)
+          Menu Principal: 
+          1. Suma
+          2. Resta
+          3. Multiplicacion
+          4. Division
+          5. Cambiar numeros
+          6. Salir
+          """)
+    eleccion = int(input())
+    if eleccion == 1:
+        print("")
+        print("Resultado: ", numero1, "+", numero2, "=", numero1+numero2)
+    
+    if eleccion == 2:
+        print("")
+        print("Resultado: ", numero1, "-", numero2, "=", numero1-numero2)
+
+    if eleccion == 3:
+        print("")
+        print("Resultado: ", numero1, "*", numero2, "=", numero1*numero2)
+    
+    if eleccion == 4:
+        print("")
+        print("Resultado: ", numero1, "/", numero2, "=", numero1/numero2)
+    
+    if eleccion == 5:
+       numero1=int(input("Ingresa un número: "))
+       numero2=int(input("Ingresa otro número: "))
+
+    if eleccion == 6:
+        print("Has salido de la calculadora creada por: Óscar Martínez")
