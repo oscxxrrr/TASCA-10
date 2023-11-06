@@ -15,19 +15,15 @@ while eleccion != 6:
           """)
     eleccion = int(input())
     if eleccion == 1:
-        print("")
         print("Resultado: ", numero1, "+", numero2, "=", numero1+numero2)
     
     if eleccion == 2:
-        print("")
         print("Resultado: ", numero1, "-", numero2, "=", numero1-numero2)
 
     if eleccion == 3:
-        print("")
         print("Resultado: ", numero1, "*", numero2, "=", numero1*numero2)
     
     if eleccion == 4:
-        print("")
         print("Resultado: ", numero1, "/", numero2, "=", numero1/numero2)
     
     if eleccion == 5:
