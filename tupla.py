@@ -6,9 +6,16 @@ def segona_ocurrencia(l, e):
     if a==0:
         print("No hi ha ocurrències d'aquest element")
     elif a==1:
-        print("la primera ocurréncia esta en la posicio {}: ".format(l.index(e)))
+        print("la primera ocurréncia esta en la posicio {} ".format(l.index(e)))
+    
+    elif a==2:
+        print("Hi ha més d'una ocurrència de {} ".format(e))
+        p= l.index(e)
+        print(p)
+        so=l.index(e,(p+1))
+        print(so)  
     elif a>2:
-        print("Hi ha més de dues ocurrència de {}: ".format(e))
+        print("Hi ha més de dues ocurrència de {} ".format(e))
         p= l.index(e)
         print(p)
         so=l.index(e,(p+1))
