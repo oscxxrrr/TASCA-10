@@ -1,39 +1,101 @@
 def menu_principal():
     print("""
-        Menú Principal:
-          1.Calculadora de numeros enteros
-          2.Calculadora de numeros reales
-          3.Salir
-          """)
-    a = int(input("Elige una opcion: "))
-    return a
+        1. Operaciones con Números Enteros
+        2. Operaciones con Números Reales
+        3. Salir
+    """)
+    return int(input("Elige una opción: "))
+
 def calculadora_enteros():
-    op = 1 
-    while op>0:
-        print("""
+    print("Calculadora Enteros")
+    numero1 = int(input("Ingresa el primer número entero: "))
+    numero2 = int(input("Ingresa el segundo número entero: "))
+    operacion = int(input("""
         Menu Enteros:
-        1.Sumar
-        2.Restar
-        3.Multiplicar 
-        4.Dividir
-        5.Salir
-          """)
-    eleccion = int(input())
-    if eleccion == 1:
-        print("Resultado: ", numero1, "+", numero2, "=", numero1+numero2)
+        1. Sumar
+        2. Restar
+        3. Multiplicar
+        4. Dividir
+        5. Cambiar números
+        6. Cambiar tipo de números
+        7. Salir
+        Elige una opción: 
+    """))
     
-    if eleccion == 2:
-        print("Resultado: ", numero1, "-", numero2, "=", numero1-numero2)
+    if operacion == 1:
+        resultado = numero1 + numero2
+        print(f"Resultado: {numero1} + {numero2} = {resultado}")
+    elif operacion == 2:
+        resultado = numero1 - numero2
+        print(f"Resultado: {numero1} - {numero2} = {resultado}")
+    elif operacion == 3:
+        resultado = numero1 * numero2
+        print(f"Resultado: {numero1} * {numero2} = {resultado}")
+    elif operacion == 4:
+        if numero2 != 0:
+            resultado = numero1 / numero2
+            print(f"Resultado: {numero1} / {numero2} = {resultado}")
+        else:
+            print("No se puede dividir por cero.")
+    elif operacion == 5:
+        numero1 = int(input("Ingresa un nuevo primer número entero: "))
+        numero2 = int(input("Ingresa un nuevo segundo número entero: "))
+    elif operacion == 6:
+        return
+    elif operacion == 7:
+        print ("Has salido de la calculadora de numeros enteros")
+        print("Elige otra opcion: ")
 
-    if eleccion == 3:
-        print("Resultado: ", numero1, "*", numero2, "=", numero1*numero2)
+def calculadora_reales():
+    print("Calculadora Reales")
+    numero1 = float(input("Ingresa el primer número real: "))
+    numero2 = float(input("Ingresa el segundo número real: "))
+    operacion = int(input("""
+        Menu Reales:
+        1. Sumar
+        2. Restar
+        3. Multiplicar
+        4. Dividir
+        5. Cambiar números
+        6. Cambiar tipo de números
+        7. Salir
+        Elige una opción: 
+    """))
     
-    if eleccion == 4:
-        print("Resultado: ", numero1, "/", numero2, "=", numero1/numero2)
-    
-    if eleccion == 5:
-       numero1=int(input("Ingresa un número: "))
-       numero2=int(input("Ingresa otro número: "))
+    if operacion == 1:
+        resultado = numero1 + numero2
+        print(f"Resultado: {numero1} + {numero2} = {resultado}")
+    elif operacion == 2:
+        resultado = numero1 - numero2
+        print(f"Resultado: {numero1} - {numero2} = {resultado}")
+    elif operacion == 3:
+        resultado = numero1 * numero2
+        print(f"Resultado: {numero1} * {numero2} = {resultado}")
+    elif operacion == 4:
+        if numero2 != 0:
+            resultado = numero1 / numero2
+            print(f"Resultado: {numero1} / {numero2} = {resultado}")
+        else:
+            print("No se puede dividir por cero.")
+    elif operacion == 5:
+        numero1 = float(input("Ingresa un nuevo primer número real: "))
+        numero2 = float(input("Ingresa un nuevo segundo número real: "))
+    elif operacion == 6:
+        return
+    elif operacion == 7:
+        print("Has salido de la caluladora de numeros reales")
+        print("Elige otra opcion: ")
 
-    if eleccion == 6:
-        print("Has salido de la calculadora creada por: Óscar Martínez")
+# Programa principal
+while True:
+    opcion = menu_principal()
+    
+    if opcion == 1:
+        calculadora_enteros()
+    elif opcion == 2:
+        calculadora_reales()
+    elif opcion == 3:
+        print("Has salido de la calculadora creada por Óscar Martínez")
+        break
+    else:
+        print("Opción no válida. Intente de nuevo.")
