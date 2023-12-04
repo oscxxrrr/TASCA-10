@@ -1,23 +1,20 @@
-def gran_llista(lista):
-    if len(lista) == 0:
-        return None
-    
-    maximo = lista[0]
-    
-    for numero in lista:
-        if numero > maximo:
-            maximo = numero
-    
-    return maximo
+def leer_lista():
+    a = '1'
+    l=[]
+    while a!='a':
+        a=input("Introduze un numero diferente a 'a': ")
+        if a !='a':
+            l.append(int(a))
+        else:
+            return l
 
-def ingresar_lista():
-    entrada = input("Ingrese una lista de números separados por espacios: ")
-    lista_numeros = [int(num) for num in entrada.split()]  
-    return lista_numeros
+def gran_llista(l):
+    max = l[0]
+    for e in l:
+        if e > max:
+            max = e 
+    print("El numero mas grande de la lista {} és {}".format(l, max)) 
 
-lista_del_usuario = ingresar_lista()
-resultado = gran_llista(lista_del_usuario)
-if resultado is not None:
-    print("El número más grande de la lista es:", resultado)
-else:
-    print("No hay nada en la lista.")
+#Programa principal
+l = leer_lista()
+gran_llista(l)
