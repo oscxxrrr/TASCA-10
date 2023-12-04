@@ -1,14 +1,3 @@
-def  menu_principal(a):
-    print("""
-        Menú principal:
-          1. Sumar lista
-          2. Multiplicar lista
-          3. Salir
-    
-    """)
-    a = int(input("Elija una opción: "))
-    return a
-
 def leer_lista():
     a = '1'
     l=[]

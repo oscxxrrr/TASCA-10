@@ -71,7 +71,68 @@ def calculadora_reales():
             print("{} / {} = {}".format(x, y, x / y))
         elif op == 5:  # Salir
             print("Ha salido de la calculadora de reales.\n")
-            
+
+# Definicions Binari to
+
+def bin_to_oct(binary_num):
+    decimal_num = int(binary_num, 2)
+    octal_num = oct(decimal_num)
+    return octal_num[2:]
+
+def bin_to_dec(binary_num):
+    decimal_num = int(binary_num, 2)
+    return decimal_num[2:]
+
+def bin_to_hex(binary_num):
+    decimal_num = int(binary_num, 2)
+    hex_num = hex(decimal_num)
+    return hex_num[2:]
+
+# Definicions Octal to
+
+def oct_to_bin(octal_num):
+    decimal_num = int(octal_num, 8)
+    binary_num = bin(decimal_num)
+    return binary_num[2:]
+
+def oct_to_dec(octal_num):
+    decimal_num = int(octal_num, 8)
+    return decimal_num[2:]
+
+def oct_to_hex(octal_num):
+    decimal_num = int(octal_num, 8)
+    hex_num = hex(decimal_num)
+    return hex_num[2:]
+
+# Definicions Decimal to
+
+def dec_to_bin(decimal_num):
+    binary_num = bin(int(decimal_num))
+    return binary_num[2:]
+
+def dec_to_oct(decimal_num):
+    octal_num = oct(int(decimal_num))
+    return octal_num[2:]
+
+def dec_to_hex(decimal_num):
+    hex_num = hex(int(decimal_num))
+    return hex_num[2:]
+
+# Definicions Hexadecimal to
+
+def hex_to_bin(hex_num):
+    decimal_num = int(hex_num, 16)
+    binary_num = bin(decimal_num)
+    return binary_num[2:]
+
+def hex_to_oct(hex_num):
+    decimal_num = int(hex_num, 16)
+    octal_num = oct(decimal_num)
+    return octal_num[2:]
+
+def hex_to_dec(hex_num):
+    decimal_num = int(hex_num, 16)
+    return decimal_num[2:]            
 
 def menu_cambios_base():
     while True:
