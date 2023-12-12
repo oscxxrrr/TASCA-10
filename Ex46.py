@@ -1,6 +1,10 @@
 def esta_ordenada(a):
-    b = sorted(a)  # Copia profunda de la lista ordenada
-    return a == b
+    b = a.copy()
+    a.sort()
+    if a == b:
+        print("La llista {} està ordenada {}".format(a, b))
+    else:
+        print("La llista {} no està ordenada {}".format(a, b))
 
 def llegir_llista():
     a = []
@@ -11,13 +15,8 @@ def llegir_llista():
             a.append(c)
     return a
 
-# Programa principal
+# Programa Principal
 a = llegir_llista()
-ordenada = esta_ordenada(a.copy())  # Se realiza una copia de la lista para evitar modificaciones
-
-if ordenada:
-    print("La llista {} està ordenada".format(a))
-else:
-    print("La llista {} no està ordenada".format(a))
+esta_ordenada(a)
 
 
