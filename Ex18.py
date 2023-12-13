@@ -1,10 +1,8 @@
-def invertir(cadena):
-    cadena_invertida = ""
-    for caracter in cadena: 
-        cadena_invertida = caracter + cadena_invertida
-    return cadena_invertida
-cadena_principal = input("Introduce una cadena de caracteres: ")
-
-cadena_invertida = invertir(cadena_principal)
-
-print("La cadena invertida se ve asi: {}".format(cadena_invertida)) 
+def invertir(a):
+	b = list(a)
+	c = b[::-1]
+	r = "".join(c)
+	return r
+# Programa principal
+s = "Això és una cadena que s’ha de girar"
+print("La cadena girada és: ",invertir(s))
