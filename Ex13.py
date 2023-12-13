@@ -1,11 +1,11 @@
 def gran(a, b):
-		if (a>b):
+		if (a>b): #Nos devolvera A si es mas grande que B
 			return a
-		else:
+		else:#Sino, devolvera B, es decir, B es mas grande
 			return b
 
-# Ús de la funció 
+# Programa principal
 x = input("Introdueixi el primer número a comparar: ")
 y = input("Introdueixi el segon número a comparar: ")
 c = gran(x, y)
-print("El més gran és: ", c)
+print("El més gran és: ", c) 

@@ -79,11 +79,11 @@ a = 1
 while a>0 :
     a = menu_principal()
     match a :
-        case 1:
+        case 1: #Si elijes el 1 del programa principal entraras a la calculadora de enteros.
             calculadora_enters()
-        case 2: 
+        case 2: #Si elijes el 2 del programa principal entraras a la calculadora de reales.
             calculadora_reals()
-        case 3:
+        case 3: #Si elijes el 3 del programa principal saldras de la calculadora.
             a = -1
-        case other:
+        case other: #Si elijes un numero que no este en el programa principal se hara un print de opcion no valdia
             print("Opció no vàlida ") 
