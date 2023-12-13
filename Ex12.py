@@ -1,4 +1,5 @@
-def  menu_principal():
+def menu_principal():
+    # Imprime el menú principal con varias opciones numeradas
     print("""
         Menú principal:
           1. Calculadora de números enteros
@@ -6,12 +7,14 @@ def  menu_principal():
           3. Cambios de base
           4. Salir
           """)
+    # Solicita al usuario que ingrese un número que represente una opción del menú
     a = int(input("Elija una opción: "))
+    # Retorna el número ingresado por el usuario
     return a
 
 def calculadora_enteros():
-    op = 1
-    while op > 0:
+    op = 1  # Inicialización de la variable de opción para ingresar al bucle while
+    while op > 0:  # Mientras la opción ingresada sea mayor que cero, se ejecutará el bucle
         print("""
               Menú enteros
               1. Sumar
@@ -20,30 +23,30 @@ def calculadora_enteros():
               4. Dividir
               5. Salir
         """)
-        op = int(input("Elija una opción: "))
-        if op == 1:  # Sumar
-            x = int(input("Ingrese el primer número: "))
-            y = int(input("Ingrese el segundo número: "))
-            print("{} + {} = {}".format(x, y, x + y))
-        elif op == 2:  # Restar
-            x = int(input("Ingrese el primer número: "))
-            y = int(input("Ingrese el segundo número: "))
-            print("{} - {} = {}".format(x, y, x - y))
-        elif op == 3:  # Multiplicar
-            x = int(input("Ingrese el primer número: "))
-            y = int(input("Ingrese el segundo número: "))
-            print("{} * {} = {}".format(x, y, x * y))
-        elif op == 4:  # Dividir
-            x = int(input("Ingrese el primer número: "))
-            y = int(input("Ingrese el segundo número: "))
-            print("{} / {} = {}".format(x, y, x / y))
-        elif op == 5:  # Salir
-            print("Ha salido de la calculadora de enteros.\n")
-            break
+        op = int(input("Elija una opción: "))  # Solicita al usuario que elija una opción del menú
+        if op == 1:  # Si la opción es 1, realiza la suma
+            x = int(input("Ingrese el primer número: "))  # Imprime el primer número
+            y = int(input("Ingrese el segundo número: "))  # Imprime el segundo número
+            print("{} + {} = {}".format(x, y, x + y))  # Muestra el resultado de la suma
+        elif op == 2:  # Si la opción es 2, realiza la resta
+            x = int(input("Ingrese el primer número: "))  # Imprime el primer número
+            y = int(input("Ingrese el segundo número: "))  # Imprime el segundo número
+            print("{} - {} = {}".format(x, y, x - y))  # Muestra el resultado de la resta
+        elif op == 3:  # Si la opción es 3, realiza la multiplicación
+            x = int(input("Ingrese el primer número: "))  # Imprime el primer número
+            y = int(input("Ingrese el segundo número: "))  # Imprime el segundo número
+            print("{} * {} = {}".format(x, y, x * y))  # Muestra el resultado de la multiplicación
+        elif op == 4:  # Si la opción es 4, realiza la división
+            x = int(input("Ingrese el primer número: "))  # Imprime el primer número
+            y = int(input("Ingrese el segundo número: "))  # Imprime el segundo número
+            print("{} / {} = {}".format(x, y, x / y))  # Muestra el resultado de la división
+        elif op == 5:  # Si la opción es 5, sale del bucle
+            print("Ha salido de la calculadora de enteros.\n")  # Muestra un mensaje de salida
+            break  # Sale del bucle while
 
 def calculadora_reales():
-    op = 1
-    while op > 0:
+    op = 1  # Inicialización de la variable de opción para ingresar al bucle while
+    while op > 0:  # Mientras la opción ingresada sea mayor que cero, se ejecutará el bucle
         print("""
               Menú reales
               1. Sumar
@@ -52,87 +55,101 @@ def calculadora_reales():
               4. Dividir
               5. Salir
         """)
-        op = int(input("Elija una opción: "))
-        if op == 1:  # Sumar
-            x = float(input("Ingrese el primer número: "))
-            y = float(input("Ingrese el segundo número: "))
-            print("{} + {} = {}".format(x, y, x + y))
-        elif op == 2:  # Restar
-            x = float(input("Ingrese el primer número: "))
-            y = float(input("Ingrese el segundo número: "))
-            print("{} - {} = {}".format(x, y, x - y))
-        elif op == 3:  # Multiplicar
-            x = float(input("Ingrese el primer número: "))
-            y = float(input("Ingrese el segundo número: "))
-            print("{} * {} = {}".format(x, y, x * y))
-        elif op == 4:  # Dividir
-            x = float(input("Ingrese el primer número: "))
-            y = float(input("Ingrese el segundo número: "))
-            print("{} / {} = {}".format(x, y, x / y))
-        elif op == 5:  # Salir
-            print("Ha salido de la calculadora de reales.\n")
+        op = int(input("Elija una opción: "))  # Solicita al usuario que elija una opción del menú
+        if op == 1:  # Si la opción es 1, realiza la suma
+            x = float(input("Ingrese el primer número: "))  # Solicita el primer número
+            y = float(input("Ingrese el segundo número: "))  # Solicita el segundo número
+            print("{} + {} = {}".format(x, y, x + y))  # Muestra el resultado de la suma
+        elif op == 2:  # Si la opción es 2, realiza la resta
+            x = float(input("Ingrese el primer número: "))  # Solicita el primer número
+            y = float(input("Ingrese el segundo número: "))  # Solicita el segundo número
+            print("{} - {} = {}".format(x, y, x - y))  # Muestra el resultado de la resta
+        elif op == 3:  # Si la opción es 3, realiza la multiplicación
+            x = float(input("Ingrese el primer número: "))  # Solicita el primer número
+            y = float(input("Ingrese el segundo número: "))  # Solicita el segundo número
+            print("{} * {} = {}".format(x, y, x * y))  # Muestra el resultado de la multiplicación
+        elif op == 4:  # Si la opción es 4, realiza la división
+            x = float(input("Ingrese el primer número: "))  # Solicita el primer número
+            y = float(input("Ingrese el segundo número: "))  # Solicita el segundo número
+            print("{} / {} = {}".format(x, y, x / y))  # Muestra el resultado de la división
+        elif op == 5:  # Si la opción es 5, muestra un mensaje de salida
+            op = -1
+            print("Ha salido de la calculadora de reales.\n")  # Muestra un mensaje de salida
 
 # Definicions Binari to
-
 def bin_to_oct(binary_num):
+    # Convierte el número binario a decimal
     decimal_num = int(binary_num, 2)
+    # Convierte el número decimal a octal y lo devuelve eliminando el prefijo '0o'
     octal_num = oct(decimal_num)
-    return octal_num[2:]
+    return octal_num[2:]  # Retorna el número octal eliminando los dos primeros caracteres ('0o')
 
 def bin_to_dec(binary_num):
+    # Convierte el número binario a decimal y lo devuelve
     decimal_num = int(binary_num, 2)
-    return decimal_num[2:]
+    return decimal_num  # Retorna el número decimal
 
 def bin_to_hex(binary_num):
+    # Convierte el número binario a decimal
     decimal_num = int(binary_num, 2)
+    # Convierte el número decimal a hexadecimal y lo devuelve eliminando el prefijo '0x'
     hex_num = hex(decimal_num)
-    return hex_num[2:]
+    return hex_num[2:]  # Retorna el número hexadecimal eliminando los dos primeros caracteres ('0x')
+
 
 # Definicions Octal to
-
 def oct_to_bin(octal_num):
+    # Convierte el número octal a decimal
     decimal_num = int(octal_num, 8)
+    # Convierte el número decimal a binario y lo devuelve eliminando el prefijo '0b'
     binary_num = bin(decimal_num)
-    return binary_num[2:]
+    return binary_num[2:]  # Retorna el número binario eliminando los dos primeros caracteres ('0b')
 
 def oct_to_dec(octal_num):
+    # Convierte el número octal a decimal y lo retorna
     decimal_num = int(octal_num, 8)
-    return decimal_num[2:]
+    return decimal_num  # Retorna el número decimal
 
 def oct_to_hex(octal_num):
+    # Convierte el número octal a decimal
     decimal_num = int(octal_num, 8)
+    # Convierte el número decimal a hexadecimal y lo devuelve eliminando el prefijo '0x'
     hex_num = hex(decimal_num)
-    return hex_num[2:]
+    return hex_num[2:]  # Retorna el número hexadecimal eliminando los dos primeros caracteres ('0x')
+
 
 # Definicions Decimal to
-
 def dec_to_bin(decimal_num):
+    # Convierte el número decimal a binario y devuelve el resultado eliminando el prefijo '0b'
     binary_num = bin(int(decimal_num))
-    return binary_num[2:]
+    return binary_num[2:]  # Retorna el número binario eliminando los dos primeros caracteres ('0b')
 
 def dec_to_oct(decimal_num):
+    # Convierte el número decimal a octal y devuelve el resultado eliminando el prefijo '0o'
     octal_num = oct(int(decimal_num))
-    return octal_num[2:]
+    return octal_num[2:]  # Retorna el número octal eliminando los dos primeros caracteres ('0o')
 
 def dec_to_hex(decimal_num):
+    # Convierte el número decimal a hexadecimal y devuelve el resultado eliminando el prefijo '0x'
     hex_num = hex(int(decimal_num))
-    return hex_num[2:]
+    return hex_num[2:]  # Retorna el número hexadecimal eliminando los dos primeros caracteres ('0x')
+
 
 # Definicions Hexadecimal to
-
 def hex_to_bin(hex_num):
-    decimal_num = int(hex_num, 16)
-    binary_num = bin(decimal_num)
-    return binary_num[2:]
+    decimal_num = int(hex_num, 16)  # Convierte el número hexadecimal a decimal
+    binary_num = bin(decimal_num)  # Convierte el número decimal a binario
+    return binary_num[2:]  # Retorna el número binario eliminando los dos primeros caracteres ('0b')
 
 def hex_to_oct(hex_num):
-    decimal_num = int(hex_num, 16)
-    octal_num = oct(decimal_num)
-    return octal_num[2:]
+    decimal_num = int(hex_num, 16)  # Convierte el número hexadecimal a decimal
+    octal_num = oct(decimal_num)  # Convierte el número decimal a octal
+    return octal_num[2:]  # Retorna el número octal eliminando los dos primeros caracteres ('0o')
 
 def hex_to_dec(hex_num):
-    decimal_num = int(hex_num, 16)
-    return decimal_num[2:]            
+    decimal_num = int(hex_num, 16)  # Convierte el número hexadecimal a decimal
+    return decimal_num  # Retorna el número decimal
+            
 
 def menu_cambios_base():
     while True:
